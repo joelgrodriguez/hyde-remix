@@ -47,3 +47,23 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime', required: true }
       - { label: 'Featured Image', name: 'thumbnail', widget: 'image', required: true }
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+  - name: "settings"
+    label: "Settings"
+    extension: "json"
+    editor:
+      preview: false
+    files:
+      - file: "src/data/navigation.json"
+        label: "Navigation"
+        name: "navigation"
+        fields: 
+          - name: overview
+            label: Overview
+            widget: list
+            fields:
+            - name: links
+              label: Links
+              widget: list
+              fields: 
+                - {name: title}
+                - {name: url}

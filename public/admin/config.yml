@@ -57,8 +57,8 @@ collections:
         label: "Navigation"
         name: "navigation"
         fields: 
-          - name: overview
-            label: Overview
+          - name: menu
+            label: Menus
             widget: list
             fields:
             - name: links

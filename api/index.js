@@ -35,7 +35,7 @@ export async function getAllProducts(){
         const content = await import(`../_lib/products/${product}`);
         const meta = matter(content.default)
         products.push({
-            slug: page.replace('.md',''),
+            slug: product.replace('.md',''),
             title: meta.data.title
         })
     }

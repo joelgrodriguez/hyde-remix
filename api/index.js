@@ -27,6 +27,31 @@ export async function getPostBySlug(slug){
     }
 }
 
+export async function getAllProducts(){
+    const context = require.context('../_lib/products', false, /\.md$/)
+    const products = []
+    for(const key of context.keys()){
+        const product = key.slice(2);
+        const content = await import(`../_lib/products/${product}`);
+        const meta = matter(content.default)
+        products.push({
+            slug: page.replace('.md',''),
+            title: meta.data.title
+        })
+    }
+    return products;
+}
+
+export async function getProductBySlug(slug){
+    const fileContent = await import(`../_lib/products/${slug}.md`);
+    const meta = matter(fileContent.default)
+    const content = marked(meta.content)    
+    return {
+        title: meta.data.title, 
+        content: content
+    }
+}
+
 export async function getAllPages(){
     const context = require.context('../_lib/pages', false, /\.md$/)
     const pages = []
@@ -51,6 +76,8 @@ export async function getPageBySlug(slug){
         content: content
     }
 }
+
+
 
 export async function getConfig(){
     const config = await import(`../config.yml`)

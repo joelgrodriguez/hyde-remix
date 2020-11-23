@@ -2,8 +2,9 @@
     "compilerOptions": {
         "baseUrl": "./",
         "paths": {
-            "@includes/*": ["_includes/*"],
-            "@layouts/*": ["_layouts/*"],
+            "@components/*": ["_components/*"],
+            "@includes/*": ["_components/includes/*"],
+            "@layouts/*": ["_components/layouts/*"],
             "@posts/*": ["_posts/*"],
             "@api": ["api/index"],
         }

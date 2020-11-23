@@ -1,5 +1,5 @@
 {
-  "name": "hyde remix",
+  "name": "hyde-remix",
   "version": "1.0.0",
   "description": "A fork of hyde template. Next.js, NetlifyCMS, ChakraUI, React Icons",
   "main": "index.js",

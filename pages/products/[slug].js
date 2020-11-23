@@ -1,5 +1,5 @@
 import PostLayout from "@layouts/post";
-import { getPostBySlug, getAllPosts } from "@api";
+import { getProductBySlug, getAllProducts } from "@api";
 
 export default function Post(props) {
   return <PostLayout title={props.title} content={props.content} />;

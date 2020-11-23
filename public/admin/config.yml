@@ -29,7 +29,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
   - label: 'Products'
     name: 'product'
-    folder: 'content/products'
+    folder: '_lib/products'
     create: true
     slug: '{{slug}}'
     fields:
